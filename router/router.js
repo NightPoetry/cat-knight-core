@@ -483,9 +483,9 @@ class Router {
         return orderA - orderB;
       }
       
-      // 负数优先级：按绝对值升序排列（-1 → -2 → -3...），即绝对值小的先执行
+      // 负数优先级：按升序排列（-3 → -2 → -1...），即数值大的先执行
       if (orderA < 0 && orderB < 0) {
-        return Math.abs(orderA) - Math.abs(orderB);
+        return orderA - orderB;
       }
       
       // 正数优先级在前，负数优先级在后

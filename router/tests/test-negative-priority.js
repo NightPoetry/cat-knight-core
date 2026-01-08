@@ -66,14 +66,14 @@ if (handler) {
     console.log('\n=== 执行顺序结果 ===');
     console.log('实际执行顺序:', executionOrder);
     
-    // 预期执行顺序：正数优先级按升序，负数优先级按绝对值升序
+    // 预期执行顺序：正数优先级按升序，负数优先级按升序（-3 → -2 → -1）
     const expectedOrder = [
       'positive-middleware-1',
       'positive-middleware-2', 
       'positive-middleware-3',
-      'negative-middleware--1', // -1
-      'negative-middleware--2', // -2
       'negative-middleware--3', // -3
+      'negative-middleware--2', // -2
+      'negative-middleware--1', // -1
       'route-handler'
     ];
     
