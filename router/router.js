@@ -478,12 +478,17 @@ class Router {
       const orderA = a.config.order;
       const orderB = b.config.order;
       
+      // 正数优先级：按升序排列（1 → 2 → 3...）
       if (orderA >= 0 && orderB >= 0) {
         return orderA - orderB;
       }
+      
+      // 负数优先级：按绝对值升序排列（-1 → -2 → -3...），即绝对值小的先执行
       if (orderA < 0 && orderB < 0) {
-        return Math.abs(orderB) - Math.abs(orderA);
+        return Math.abs(orderA) - Math.abs(orderB);
       }
+      
+      // 正数优先级在前，负数优先级在后
       return orderA >= 0 ? -1 : 1;
     });
   }
