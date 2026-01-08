@@ -26,8 +26,21 @@ Core functionality for Legend of Cat Knight game, including router and storage s
 
 ## 安装
 
+### 从GitHub拉取
+
 ```bash
-npm install cat-knight-core
+git clone https://github.com/NightPoetry/cat-knight-core.git
+cd cat-knight-core
+npm install
+```
+
+### 本地使用
+
+在项目中使用本地安装的包：
+
+```bash
+# 在你的项目目录中
+npm install /path/to/cat-knight-core
 ```
 
 ## 快速开始
@@ -150,4 +163,4 @@ npm test
 
 ## 许可证
 
-ISC
+MIT
