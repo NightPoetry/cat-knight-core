@@ -1,0 +1,26 @@
+{
+  "name": "cat-knight-core",
+  "version": "1.0.0",
+  "description": "Core functionality for Legend of Cat Knight game",
+  "main": "index.js",
+  "directories": {
+    "router": "router",
+    "storage": "storage",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/**/*.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "decimal.js": "^10.6.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "chai": "^6.2.2",
+    "mocha": "^11.7.5"
+  }
+}
